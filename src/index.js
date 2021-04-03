@@ -17,8 +17,8 @@ function Todo() {
   };
 
   const handleDelete = (todo) => {
-    const idx = todos.findIndex((t) => t.id === todo.id);
-    setTodos((prev) => prev.splice(0, idx));
+    const newTodos = todos.filter((t) => t.id !== todo.id);
+    setTodos(newTodos);
   };
 
   return (
